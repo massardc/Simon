@@ -15,4 +15,9 @@ class RoundedButton: UIButton {
         layer.masksToBounds = true
     }
 
+    override var isHighlighted: Bool {
+        didSet {
+            alpha = isHighlighted ? 1.0 : 0.5
+        }
+    }
 }

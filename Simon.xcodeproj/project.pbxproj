@@ -58,11 +58,11 @@
 			children = (
 				BF3EEA99204A025B00AF72F0 /* AppDelegate.swift */,
 				BF3EEA9B204A025B00AF72F0 /* ViewController.swift */,
+				BF3EEAAB204A0AE400AF72F0 /* RoundedButton.swift */,
 				BF3EEA9D204A025B00AF72F0 /* Main.storyboard */,
 				BF3EEAA0204A025D00AF72F0 /* Assets.xcassets */,
 				BF3EEAA2204A025D00AF72F0 /* LaunchScreen.storyboard */,
 				BF3EEAA5204A025D00AF72F0 /* Info.plist */,
-				BF3EEAAB204A0AE400AF72F0 /* RoundedButton.swift */,
 			);
 			path = Simon;
 			sourceTree = "<group>";
