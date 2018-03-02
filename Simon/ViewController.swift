@@ -69,7 +69,7 @@ class ViewController: UIViewController {
     }
     
     func flashButton(button: RoundedButton) {
-        UIView.animate(withDuration: 1.0, animations: {
+        UIView.animate(withDuration: 0.5, animations: {
             button.alpha = 1.0
             button.alpha = 0.5
         }) { (success) in
@@ -80,7 +80,25 @@ class ViewController: UIViewController {
     
     //MARK: - Actions
     @IBAction func colorButtonHandler(_ sender: RoundedButton) {
-        print("Button \(sender.tag) tapped.")
+        // Checks if right color was tapped
+        // and removes this entry from the array (no need for another index variable)
+        if sender.tag == colorsToTap.removeFirst() {
+            
+        } else {
+            for button in colorButtons {
+                button.isEnabled = false
+            }
+            return
+        }
+        
+        // Sequence successfully tapped
+        if colorsToTap.isEmpty {
+            for button in colorButtons {
+                button.isEnabled = false
+            }
+            actionButton.setTitle("Continue", for: .normal)
+            actionButton.isEnabled = true
+        }
     }
     
     @IBAction func actionButtonHandler(_ sender: UIButton) {
